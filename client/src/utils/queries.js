@@ -1,10 +1,7 @@
 import { gql } from '@apollo/client';
 
-
-
-
 export const QUERY_ME = gql`
-    queary me {
+    query me {
         me {
             _id
             username
@@ -19,8 +16,7 @@ export const QUERY_ME = gql`
                 link
             }
         }
-    }
-`;
+    }`;
 
 export const searchGoogleBooks = (query) => {
     return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
