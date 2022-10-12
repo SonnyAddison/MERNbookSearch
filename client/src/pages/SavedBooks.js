@@ -13,7 +13,11 @@ const SavedBooks = () => {
   // use this to determine if `useEffect()` hook needs to run again
   const userDataLength = Object.keys(userData).length;
 
-  useEffect(() => {
+  const { loading, data } = useQuery(GET_ME, {
+    variables: { username: Auth.getProfile().data.username }
+  });
+  const me = data?.me || [];
+
     const getUserData = async () => {
       try {
         const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -22,7 +26,7 @@ const SavedBooks = () => {
           return false;
         }
 
-        const response = await LOGIN_USER(token);
+        const response = await login(token);
 
         if (!response.ok) {
           throw new Error('something went wrong!');
