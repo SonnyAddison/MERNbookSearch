@@ -1,35 +1,45 @@
 # MERNbookSearch  
  ## Description
-Team Information Generator allows for you to use the server to answer questions via cmd line and then will generate your html file.  
 
+Search application for Google Books that allows one to sign into an account and save their favoret books.
   
 ## User Sory
 
-
-AS A manager  
-I WANT to generate a webpage that displays my team's basic info    
-SO THAT  I have quick access to their emails and GitHub profiles.    
-
+AS AN avid reader  
+I WANT to search for new books to read  
+SO THAT I can keep a list of books to purchase  
 
 ## Acceptance Criteria
 
-GIVEN a command-line application that accepts user input  
-WHEN I am prompted for my team members and their information  
-THEN an HTML file is generated that displays a nicely formatted team roster based on user input  
-WHEN I click on an email address in the HTML  
-THEN my default email program opens and populates the TO field of the email with the address  
-WHEN I click on the GitHub username  
-THEN that GitHub profile opens in a new tab  
-WHEN I start the application  
-THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number  
-WHEN I enter the team manager’s name, employee ID, email address, and office number  
-THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team  
-WHEN I select the engineer option  
-THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu  
-WHEN I select the intern option  
-THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu  
-WHEN I decide to finish building my team  
-THEN I exit the application, and the HTML is generated  
+GIVEN a book search engine  
+WHEN I load the search engine  
+THEN I am presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
+WHEN I click on the Search for Books menu option  
+THEN I am presented with an input field to search for books and a submit button  
+WHEN I am not logged in and enter a search term in the input field and click the submit button  
+THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site  
+WHEN I click on the Login/Signup menu option  
+THEN a modal appears on the screen with a toggle between the option to log in or sign up  
+WHEN the toggle is set to Signup  
+THEN I am presented with three inputs for a username, an email address, and a password, and a signup button  
+WHEN the toggle is set to Login  
+THEN I am presented with two inputs for an email address and a password and login button  
+WHEN I enter a valid email address and create a password and click on the signup button  
+THEN my user account is created and I am logged in to the site  
+WHEN I enter my account’s email address and password and click on the login button  
+THEN I the modal closes and I am logged in to the site  
+WHEN I am logged in to the site  
+THEN the menu options change to Search for Books, an option to see my saved books, and Logout  
+WHEN I am logged in and enter a search term in the input field and click the submit button  
+THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site and a button to save a book to my account  
+WHEN I click on the Save button on a book  
+THEN that book’s information is saved to my account  
+WHEN I click on the option to see my saved books  
+THEN I am presented with all of the books I have saved to my account, each featuring the book’s title, author, description, image, and a link to that book on the Google Books site and a button to remove a book from my account  
+WHEN I click on the Remove button on a book  
+THEN that book is deleted from my saved books list  
+WHEN I click on the Logout button  
+THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button    
 
 ---
 ## Table of Contents (Optional)
@@ -43,7 +53,10 @@ THEN I exit the application, and the HTML is generated
 
 ## Installation
 
-To install, clone code from Github repository and then run npm i within the intergraited terminal with your coding program. Next run the test, or index file by typing node index.js (or) npm test.
+To install:  
+ * Clone code from Github repository 
+ * Type run npm i within the intergraited terminal with your coding program within the root folder.  
+ * Type npm develop to start the servers 
   
 ---
 
@@ -52,50 +65,36 @@ To install, clone code from Github repository and then run npm i within the inte
   
 ---  
   
-Open integrated Terminal in   
+Landing Page   
 
-![terminal](./public/images/loadTerminal.jpg)  
-
----  
-
-Type npm i to download node modules 
-
-![npm i](./public/images/npmI.jpg)  
+![Landing Page](./images/startPage.jpg)  
 
 ---  
 
-Run tests  
+ Search Entry
 
-
-![npm test](./public/images/test.jpg)  
- 
+![Book Search](./images/searchEntry.jpg)  
 
 ---  
 
-Run program  
+Search Results
 
-![node index](./public/images/nodeIndex.jpg)  
+![Results](./images/searchResults.jpg)  
+
 
 --- 
 
-
-Answer Questions 
-
-![answer questions](./public/images/answerQuestions.jpg) 
-
---- 
-Video Tutorial:  https://drive.google.com/file/d/11EL1kVP_cOYXZuRYZMbNX9pn5WWRoe5N/view
+Heroku link: https://fast-mountain-64888.herokuapp.com/
 
 
-GitHub link: https://sonnyaddison.github.io/teamInfoGenerator/
-
-
+GitHub link: https://github.com/SonnyAddison/MERNbookSearch
 
 
 ---
 ## Credits
 
-
+Thank you to Coding Boot Camp / Solid - Broccoli for the starter code: 
+https://github.com/coding-boot-camp/solid-broccoli
   
 ---
 ## License
